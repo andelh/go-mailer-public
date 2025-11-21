@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Must-Do Experiences in Barbados</title>
+    <style>
+      @font-face {
+        font-family: KappaBold;
+        src: url("./Kappa-Display-Bold.otf");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: KappaBold;
+        src: url("./Kappa-Display-Bold-Italic.otf");
+        font-weight: 700;
+        font-style: italic;
+      }
+      @font-face {
+        font-family: KappaBlack;
+        src: url("./Kappa-Display-Black.otf");
+        font-weight: 900;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        /* background: #defffb; */
+        background: white;
+
+        /* color: #333; */
+        color: #5d5b5c;
+      }
+      .container {
+        max-width: 650px;
+        margin: 0 auto;
+        background: #defffb;
+      }
+      .header {
+        background: url("sunset.jpg") no-repeat center/cover;
+        height: 450px;
+        position: relative;
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 60px;
+        position: relative;
+      }
+      .header h2 {
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.15em;
+        margin: 0;
+        color: #ffffff;
+      }
+      .header img {
+        width: 120px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 40px;
+      }
+      .header h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #03c3b3;
+        line-height: 1.2;
+        font-weight: 900;
+        margin: 0;
+        font-family: "KappaBlack", sans-serif;
+      }
+
+      .section {
+        padding: 30px 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .section.four {
+        padding-bottom: 100px;
+      }
+      .section.grey {
+        background-color: #e6e6e6;
+        padding-bottom: 90px;
+      }
+      .section.white {
+        background-color: #ffffff;
+        padding-bottom: 90px;
+      }
+      .section img {
+        max-width: 90%;
+        width: 100%;
+        border-radius: 2px;
+        aspect-ratio: 16/9;
+        max-height: 250px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+      .section h3 {
+        font-size: 2.2rem;
+        margin: 10px 0 5px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 0.4rem;
+        font-weight: 700;
+        font-family: "KappaBold", sans-serif;
+      }
+      .section h4 {
+        font-size: 2rem;
+        margin: 10px 0 5px;
+        color: #03c3b3;
+        text-align: center;
+      }
+      .section p {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+        max-width: 430px;
+        width: 100%;
+        line-height: 1.5;
+      }
+      .location {
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .btn {
+        display: inline-block;
+        margin: 5px 5px;
+        padding: 10px 20px;
+        background-color: #03c3b3;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        min-width: 120px;
+        font-weight: 700;
+        font-family: "KappaBold", sans-serif;
+      }
+      .btn.outline {
+        border: 1px solid #03c3b3;
+        color: #03c3b3;
+        background-color: transparent;
+      }
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1rem;
+        gap: 8px;
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+      }
+      .footer {
+        position: relative;
+        background-color: #04c9c0;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        padding-top: 100px;
+      }
+      .footer h2 {
+        margin: 0 0 10px;
+      }
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 250px;
+        margin: 0 auto;
+        gap: 2px;
+      }
+      .footer-content > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 6px;
+      }
+      .footer-content img {
+        width: 120px;
+        height: 50px;
+        object-fit: contain;
+      }
+      .footer-content .discover {
+        font-size: 1.5rem;
+        width: 100%;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0;
+        text-align: left;
+        line-height: 1;
+      }
+      .footer-content .barbados {
+        font-size: 2.7rem;
+        width: 100%;
+        text-align: left;
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .footer-content .with {
+        font-size: 1.5rem;
+        width: 100%;
+        line-height: 1;
+        text-align: right;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .custom-shape-divider-bottom-1744899699 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .custom-shape-divider-bottom-1744899699 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 35px;
+      }
+
+      .custom-shape-divider-bottom-1744899699 .shape-fill {
+        fill: #defffb;
+      }
+      .custom-shape-divider-bottom-1744899832 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .custom-shape-divider-bottom-1744899832 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 127px;
+      }
+
+      .custom-shape-divider-bottom-1744899832 .shape-fill {
+        fill: #e6e6e6;
+      }
+      .custom-shape-divider-bottom-1744900068 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .custom-shape-divider-bottom-1744900068 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 55px;
+      }
+
+      .custom-shape-divider-bottom-1744900068 .shape-fill {
+        fill: #defffb;
+      }
+      .custom-shape-divider-bottom-1744900396 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .custom-shape-divider-bottom-1744900396 svg {
+        position: relative;
+        display: block;
+        width: calc(101% + 1.3px);
+        height: 129px;
+        transform: rotateY(180deg);
+      }
+
+      .custom-shape-divider-bottom-1744900396 .shape-fill {
+        fill: #ffffff;
+      }
+      .custom-shape-divider-top-1744900620 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .custom-shape-divider-top-1744900620 svg {
+        position: relative;
+        display: block;
+        width: calc(101% + 1.3px);
+        height: 54px;
+        transform: rotateY(180deg);
+      }
+
+      .custom-shape-divider-top-1744900620 .shape-fill {
+        fill: #ffffff;
+      }
+      @media screen and (max-width: 600px) {
+        .header {
+          height: 420px;
+          padding: 0 30px;
+        }
+        .header h2 {
+          font-size: 0.8rem;
+          margin: 0 0 10px 0;
+        }
+        .header img {
+          margin-bottom: 20px;
+        }
+        .header h1 {
+          font-size: 2.1rem;
+        }
+        .section {
+          padding: 30px 16px;
+        }
+        .section.four {
+          padding-bottom: 120px;
+        }
+        .section.grey {
+          padding-bottom: 120px;
+        }
+        .section.white {
+          padding-bottom: 30px;
+        }
+        .section img {
+          max-width: 95%;
+        }
+        .section h3 {
+          font-size: 2rem;
+          margin-bottom: 0.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="go-logo.png" alt="GO!" />
+        <h2>MAKE THE MOST OF BARBADOS</h2>
+        <h1>5 Must-Do Experiences You Can't Miss</h1>
+        <!-- Curved SVG Divider for Overlap Effect -->
+        <div class="custom-shape-divider-bottom-1744899699">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="section">
+        <h4>1</h4>
+        <h3>Harbour Lights<br />Beach Club</h3>
+        <p class="location">Carlisle Bay, St. Michael</p>
+        <img src="beach-club.jpg" alt="Harbour Lights Beach Club" />
+        <p>
+          Experience the ultimate beachfront escape at Carlisle Bay! Harbour
+          Lights offers loungers, umbrellas, snorkel tours, cold beers,
+          cocktails, and delicious island bites daily!
+        </p>
+        <a href="#" class="btn outline">Learn More</a>
+        <a href="#" class="btn">Get Directions</a>
+      </div>
+      <!-- Section 2 -->
+      <div class="section">
+        <h4>2</h4>
+        <h3>Cocktail Kitchen</h3>
+        <p class="location">St. Lawrence Gap, Christ Church</p>
+        <img src="cocktail-kitchen.jpg" alt="Cocktail Kitchen" />
+        <p>
+          Savor Caribbean flavors at this award-winning hotspot, where Chef
+          Damian Leach serves up delicious dishes and signature cocktails. Try
+          the Parmesan Catch with a Mango Chow cocktail for the perfect taste
+          experience.
+        </p>
+        <a href="#" class="btn outline">Learn More</a>
+        <a href="#" class="btn">Get Directions</a>
+        <!-- Curved SVG Divider to transition into grey section -->
+        <div class="custom-shape-divider-bottom-1744899832">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section grey">
+        <h4>3</h4>
+        <h3>Harbour Lights<br />Dinner Show</h3>
+        <p class="location">Carlisle Bay, St. Michael</p>
+        <div class="image-grid">
+          <img src="dinner-show.jpg" alt="Harbour Lights Dinner Show" />
+          <img src="fire-breather.jpg" alt="Fire Breather" />
+          <img src="shaggy-bear.jpg" alt="Shaggy Bear" />
+        </div>
+        <p>
+          Experience the heart of Bajan culture at a beachfront extravaganza!
+          Enjoy a premium food and drinks inclusive dinner show with stilt
+          walkers, fire eaters, Mother Sally, Shaggy Bear, and Kadooment
+          dancers. Dance the night away to live music from 3 bands!
+        </p>
+        <a href="#" class="btn outline">Learn More</a>
+        <a href="#" class="btn">Get Directions</a>
+        <!-- Curved SVG Divider to transition into grey section -->
+        <div class="custom-shape-divider-bottom-1744900068">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section four">
+        <h4>4</h4>
+        <h3>The Bearded Rose</h3>
+        <p class="location">Limegrove Lifestyle Centre, St. James</p>
+        <img src="bearded-rose.jpg" alt="The Bearded Rose" />
+        <p>
+          Enjoy tapas-style dishes and crafted cocktails at this West Coast
+          courtyard oasis. Savor Lobster buns, Pork Baos, mini flatbreads, and
+          more, paired with classic cocktails or fine wines.
+        </p>
+        <a href="#" class="btn outline">Learn More</a>
+        <a href="#" class="btn">Get Directions</a>
+        <!-- Curved SVG Divider to transition into grey section -->
+        <div class="custom-shape-divider-bottom-1744900396">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section white">
+        <h4>5</h4>
+        <h3>UVA</h3>
+        <p class="location">EL SUEÑO, WORTHING, CHRIST CHURCH</p>
+        <img src="uva.jpg" alt="UVA" />
+        <p>
+          Dine at UVA, the South Coast's newest culinary gem, share Mediterranean
+          inspired small plates like the Oxtail and Parsnip, Tahini Eggplant or
+          Charred Octopus in a stylish, fully air-conditioned coastal-chic
+          setting.
+        </p>
+        <a href="#" class="btn outline">Learn More</a>
+        <a href="#" class="btn">Get Directions</a>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="custom-shape-divider-top-1744900620">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div class="footer-content">
+          <h3 class="discover">DISCOVER</h3>
+          <h2 class="barbados">BARBADOS</h2>
+          <div>
+            <h3 class="with">WITH</h3>
+            <img src="go-logo-white.png" alt="GO!" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
